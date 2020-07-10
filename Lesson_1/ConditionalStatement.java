@@ -1,7 +1,7 @@
 public class ConditionalStatement {
 	public static void main(String[] args) {
-		int Age = 28;
-		if (Age > 20) {
+		int age = 28;
+		if (age > 20) {
 			System.out.println("Ваш возраст больше 20 лет");
 		}
 
@@ -13,8 +13,8 @@ public class ConditionalStatement {
 			System.out.println("Вы не мужчина");
 		}
 
-		float Height = 1.72f;
-		if (Height < 1.80f) {
+		float height = 1.72f;
+		if (height < 1.80f) {
 			System.out.println("Ваш рост меньше 1 м 80 см");
 		} else {
 			System.out.println("Ваш рост не меньше 1 м 80 см");
