@@ -1,15 +1,14 @@
 public class MyFirstGame {
 	public static void main(String[] args) {
-		
-	int numbInput = 83, numbPc = 83;
+		int playerNum = 83;
+		int pcNum = 88;
 
-	do {
-		if (numbInput > numbPc) {
+		if (playerNum > pcNum) {
 			System.out.println("Введенное вами число больше того, что загадал компьютер");
-		} else if (numbInput < numbPc) {
+		} else if (playerNum < pcNum) {
 			System.out.println("Введенное вами число меньше того, что загадал компьютер");
-		} 
-	} while(numbInput != numbPc);
-	System.out.println("Вы угадали!");
+		} else {
+			System.out.println("Вы угадали!");
+		}
 	}	
 }

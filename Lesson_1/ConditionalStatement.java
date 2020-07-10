@@ -1,21 +1,20 @@
 public class ConditionalStatement {
 	public static void main(String[] args) {
-		
-		int yourAge = 28;
-		if (yourAge > 20) {
+		int Age = 28;
+		if (Age > 20) {
 			System.out.println("Ваш возраст больше 20 лет");
 		}
 
 		boolean isMan = false;
-		if (isMan == true) {
+		if (isMan) {
 			System.out.println("Вы мужчина");
 		}
-		if (!isMan == true) {
+		if (!isMan) {
 			System.out.println("Вы не мужчина");
 		}
 
-		float yourHeight = 1.72f;
-		if (yourHeight < 1.80f) {
+		float Height = 1.72f;
+		if (Height < 1.80f) {
 			System.out.println("Ваш рост меньше 1 м 80 см");
 		} else {
 			System.out.println("Ваш рост не меньше 1 м 80 см");
@@ -29,7 +28,5 @@ public class ConditionalStatement {
 		} else {
 			System.out.println("Первая буква вашего имени - не M и не I");
 		}
-
 	}
-
 }

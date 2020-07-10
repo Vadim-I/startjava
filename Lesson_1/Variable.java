@@ -8,6 +8,7 @@ public class Variable {
 		double cpuFrequency = 2.3012145;
 		char typeOs = 'W';
 		boolean isNotebook = true;
+		
 		System.out.println(numberOfCores);
 		System.out.println(versionOs);
 		System.out.println(ram);
