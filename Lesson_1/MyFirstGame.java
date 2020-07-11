@@ -8,11 +8,11 @@ public class MyFirstGame {
 		do {
 			if (playerNum > pcNum) {
 				System.out.println("Введенное вами число больше того, что загадал компьютер");
-				playerNum -= 1;
+				playerNum--;
 				System.out.println("Вновь введенное число: " + playerNum);
 			} else if (playerNum < pcNum) {
 				System.out.println("Введенное вами число меньше того, что загадал компьютер");
-				playerNum += 1;
+				playerNum++;
 				System.out.println("Вновь введенное число: " + playerNum);
 			} 
 		} while(playerNum != pcNum);
