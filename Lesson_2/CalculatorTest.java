@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class CalculatorTest {
 	public static void main(String[] args) {
 		Calculator myCalc = new Calculator();
-		char calcAgain = '0';
+		char calcAgain;
 
-		while(calcAgain != 'n') {
+		do {
 			Scanner scan = new Scanner(System.in);
 			System.out.print("Введите первое число: ");
 			myCalc.setNumber1(scan.nextInt());
@@ -14,12 +14,10 @@ public class CalculatorTest {
 			System.out.print("Введите второе число: ");
 			myCalc.setNumber2(scan.nextInt());
 			System.out.println("Результат вычисления: " + myCalc.calculate());
-			calcAgain = '0';
-			while((calcAgain != 'y') && (calcAgain != 'n')) {
+			do {
 				System.out.println("Хотите продолжить? (y / n)");
 				calcAgain = scan.next().charAt(0);
-			}
-
-		} 
+			} while((calcAgain != 'y') && (calcAgain != 'n'));
+		} while(calcAgain != 'n');
 	}
 }
