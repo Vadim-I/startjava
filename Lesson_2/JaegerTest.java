@@ -1,37 +1,37 @@
 public class JaegerTest {
 	public static void main(String[] args) {
-		Jaeger jCrimsonTyphoon = new Jaeger();
-		jCrimsonTyphoon.setModelName("Crimson Typhoon");
-		jCrimsonTyphoon.setMark("Mark-4");
-		jCrimsonTyphoon.setOrigin("China");
-		jCrimsonTyphoon.setStatus("Destroyed");
-		jCrimsonTyphoon.setHeight(76.2f);
-		jCrimsonTyphoon.setWeight(1.722f);
-		jCrimsonTyphoon.setSpeed(9);
-		jCrimsonTyphoon.setStrength(8);
-		jCrimsonTyphoon.setArmor(6);
+		Jaeger crimsonTyphoon = new Jaeger();
+		crimsonTyphoon.setModelName("Crimson Typhoon");
+		crimsonTyphoon.setMark("Mark-4");
+		crimsonTyphoon.setOrigin("China");
+		crimsonTyphoon.setStatus("Destroyed");
+		crimsonTyphoon.setHeight(76.2f);
+		crimsonTyphoon.setWeight(1.722f);
+		crimsonTyphoon.setSpeed(9);
+		crimsonTyphoon.setStrength(8);
+		crimsonTyphoon.setArmor(6);
 		
-		Jaeger jStrikerEureka = new Jaeger();
-		jStrikerEureka.setModelName("Striker Eureka");
-		jStrikerEureka.setMark("Mark-5");
-		jStrikerEureka.setOrigin("Australia");
-		jStrikerEureka.setStatus("Destroyed");
-		jStrikerEureka.setHeight(76.2f);
-		jStrikerEureka.setWeight(1.850f);
-		jStrikerEureka.setSpeed(10);
-		jStrikerEureka.setStrength(10);
-		jStrikerEureka.setArmor(9);
+		Jaeger strikerEureka = new Jaeger();
+		strikerEureka.setModelName("Striker Eureka");
+		strikerEureka.setMark("Mark-5");
+		strikerEureka.setOrigin("Australia");
+		strikerEureka.setStatus("Destroyed");
+		strikerEureka.setHeight(76.2f);
+		strikerEureka.setWeight(1.850f);
+		strikerEureka.setSpeed(10);
+		strikerEureka.setStrength(10);
+		strikerEureka.setArmor(9);
 
-		System.out.println("modelName 1 = " + jCrimsonTyphoon.getModelName());
-		System.out.println("status of " + jCrimsonTyphoon.getModelName() + " is " + jCrimsonTyphoon.getStatus());
-		System.out.println("speed = " + jCrimsonTyphoon.getSpeed());
-		System.out.println("strength = " + jCrimsonTyphoon.getStrength());
-		System.out.println("modelName 2 = " + jStrikerEureka.getModelName());
-		System.out.println("status of " + jStrikerEureka.getModelName() + " is " + jStrikerEureka.getStatus());
-		System.out.println("speed = " + jStrikerEureka.getSpeed());
-		System.out.println("strength = " + jStrikerEureka.getStrength());
-		jCrimsonTyphoon.move();
-		jCrimsonTyphoon.attack();
-		System.out.println(jStrikerEureka.scanKaiju());
+		System.out.println("modelName 1 = " + crimsonTyphoon.getModelName());
+		System.out.println("status of " + crimsonTyphoon.getModelName() + " is " + crimsonTyphoon.getStatus());
+		System.out.println("speed = " + crimsonTyphoon.getSpeed());
+		System.out.println("strength = " + crimsonTyphoon.getStrength());
+		System.out.println("modelName 2 = " + strikerEureka.getModelName());
+		System.out.println("status of " + strikerEureka.getModelName() + " is " + strikerEureka.getStatus());
+		System.out.println("speed = " + strikerEureka.getSpeed());
+		System.out.println("strength = " + strikerEureka.getStrength());
+		crimsonTyphoon.move();
+		crimsonTyphoon.attack();
+		System.out.println(strikerEureka.scanKaiju());
 	}
 }
