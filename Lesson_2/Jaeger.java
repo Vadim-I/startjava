@@ -10,76 +10,52 @@ public class Jaeger {
 	private int strength;
 	private int armor;
 
-	public String getModelName() {
-		return modelName;
+	public Jaeger(String x1, String x2, String x3, String x4, float x5, float x6, int x7, int x8, int x9) {
+		modelName = x1;
+		mark = x2;
+		origin = x3;
+		status = x4;
+		height = x5;
+		weight = x6;
+		speed = x7;
+		strength = x8;
+		armor = x9;
 	}
 
-	void setModelName(String modelName) {
-		this.modelName = modelName;
+	public String getModelName() {
+		return modelName;
 	}
 
 	public String getMark() {
 		return mark;
 	}
 
-	void setMark(String mark) {
-		this.mark = mark;
-	}
-
 	public String getOrigin() {
 		return origin;
-	}
-
-	void setOrigin(String origin) {
-		this.origin = origin;
 	}
 
 	public String getStatus() {
 		return status;
 	}
 
-	void setStatus(String status) {
-		this.status = status;
-	}
-
 	public float getHeight() {
 		return height;
-	}
-
-	void setHeight(float height) {
-		this.height = height;
 	}
 
 	public float getWeight() {
 		return weight;
 	}
 
-	void setWeight(float weight) {
-		this.weight = weight;
-	}
-
 	public int getSpeed() {
 		return speed;
-	}
-
-	void setSpeed(int speed) {
-		this.speed = speed;
 	}
 
 	public int getStrength() {
 		return strength;
 	}
 
-	void setStrength(int strength) {
-		this.strength = strength;
-	}
-
 	public int getArmor() {
 		return armor;
-	}
-
-	void setArmor(int armor) {
-		this.armor = armor;
 	}
 
 	public void move() {
