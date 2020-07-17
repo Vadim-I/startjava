@@ -10,16 +10,16 @@ public class Jaeger {
 	private int strength;
 	private int armor;
 
-	public Jaeger(String x1, String x2, String x3, String x4, float x5, float x6, int x7, int x8, int x9) {
-		modelName = x1;
-		mark = x2;
-		origin = x3;
-		status = x4;
-		height = x5;
-		weight = x6;
-		speed = x7;
-		strength = x8;
-		armor = x9;
+	public Jaeger(String modelName, String mark, String origin, String status, float height, float weight, int speed, int strength, int armor) {
+		this.modelName = modelName;
+		this.mark = mark;
+		this.origin = origin;
+		this.status = status;
+		this.height = height;
+		this.weight = weight;
+		this.speed = speed;
+		this.strength = strength;
+		this.armor = armor;
 	}
 
 	public String getModelName() {
