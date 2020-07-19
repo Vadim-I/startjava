@@ -12,7 +12,6 @@ public class GuessNumber {
 	}
 				
 	public void startGame() {
-			
 		Scanner scan = new Scanner(System.in);
 		
 		pcNum = (int)(Math.random() * 101);
