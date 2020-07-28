@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class Player {
 
 	private String name;
-	private int[] masOfNumbers = new int[10];
+	private int number;
+	private int[] nums = new int[10];
 
 	public Player(String name) {
 		this.name = name;
@@ -15,11 +16,23 @@ public class Player {
 		return name;
 	}
 
-	public void setMasOfNumbers(int[] masOfNumbers) {
-		this.masOfNumbers = Arrays.copyOf(masOfNumbers, masOfNumbers.length);
+	public int getNumber() {
+		return number;
 	}
 
-	public int[] getMasOfNumbers() {
-		return Arrays.copyOf(masOfNumbers, masOfNumbers.length);
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public void setNums(int i, int n) {
+		this.nums[i] = n;
+	}
+
+	public int[] getNums() {
+		return nums;
+	}
+
+	public void arrayFill(int i) {
+		Arrays.fill(nums, 0, i+1, 0);
 	}
 }
