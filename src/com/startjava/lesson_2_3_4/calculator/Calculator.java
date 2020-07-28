@@ -9,10 +9,10 @@ public class Calculator {
 	}
 
 	int calculate() {
-		String[] str = mathExpression.split(" ");
-		int number1 = Integer.parseInt(str[0]);
-		char sign = str[1].charAt(0);
-		int number2 = Integer.parseInt(str[2]);
+		String[] splitMathExpression = mathExpression.split(" ");
+		int number1 = Integer.parseInt(splitMathExpression[0]);
+		char sign = splitMathExpression[1].charAt(0);
+		int number2 = Integer.parseInt(splitMathExpression[2]);
 
 		switch (sign) {
 			case '+':

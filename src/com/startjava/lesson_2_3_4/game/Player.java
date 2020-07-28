@@ -1,9 +1,11 @@
 package com.startjava.lesson_2_3_4.game;
 
+import java.util.Arrays;
+
 public class Player {
 
 	private String name;
-	private int number;
+	private int[] masOfNumbers = new int[10];
 
 	public Player(String name) {
 		this.name = name;
@@ -13,15 +15,11 @@ public class Player {
 		return name;
 	}
 
-	void setName(String name) {
-		this.name = name;
+	public void setMasOfNumbers(int[] masOfNumbers) {
+		this.masOfNumbers = Arrays.copyOf(masOfNumbers, masOfNumbers.length);
 	}
 
-	public int getNumber() {
-		return number;
-	}
-
-	void setNumber(int number) {
-		this.number = number;
+	public int[] getMasOfNumbers() {
+		return Arrays.copyOf(masOfNumbers, masOfNumbers.length);
 	}
 }
