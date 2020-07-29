@@ -25,8 +25,8 @@ public class GuessNumber {
 			}
 			i++;
 		} while(((player1.getIndex() < 9) && (player2.getIndex() < 9)) &&
-				(player1.getNums(player1.getIndex()) != pcNum) &&
-				(player2.getNums(player2.getIndex()) != pcNum));
+			(player1.getNums(player1.getIndex()) != pcNum) &&
+			(player2.getNums(player2.getIndex()) != pcNum));
 		System.out.println("Введенные игроками числа:");
 		System.out.println(Arrays.toString(Arrays.copyOf(player1.getArrayNums(), player1.getIndex()+1)));
 		System.out.println(Arrays.toString(Arrays.copyOf(player2.getArrayNums(), player2.getIndex()+1)));
