@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Player {
 
 	private String name;
-	private int number;
 	private int[] nums = new int[10];
+	private int index;
 
 	public Player(String name) {
 		this.name = name;
@@ -16,23 +16,27 @@ public class Player {
 		return name;
 	}
 
-	public int getNumber() {
-		return number;
+	public void setNums(int numb) {
+		this.nums[index] = numb;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
+	public int getNums(int index) {
+		return nums[index];
 	}
 
-	public void setNums(int i, int n) {
-		this.nums[i] = n;
-	}
-
-	public int[] getNums() {
+	public int[] getArrayNums() {
 		return nums;
 	}
 
-	public void arrayFill(int i) {
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+
+	public void fillNums(int i) {
 		Arrays.fill(nums, 0, i+1, 0);
 	}
 }
