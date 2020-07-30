@@ -18,30 +18,30 @@ public class GuessNumber {
 		pcNum = (int)(Math.random() * 101);
 		int index = -1;
 		System.out.println("Начинаем игру. У вас 10 попыток.");
-        while(index < 9) {
-            index++;
-            enterNums(player1, index);
-            if(compareNums(player1, index)) {
-                break;
-            }
-            enterNums(player2, index);
-            if(compareNums(player2, index)) {
-                break;
-            }
+		while(index < 9) {
+			index++;
+			enterNums(player1, index);
+			if(compareNums(player1, index)) {
+				break;
+			}
+			enterNums(player2, index);
+			if(compareNums(player2, index)) {
+				break;
+			}
 		}
 		System.out.println("Введенные игроками числа:");
 		printNums(player1);
-        printNums(player2);
+		printNums(player2);
 		fillNums(player1);
 		fillNums(player2);
 	}
 
     private void enterNums(Player player, int index) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите число игрока " + player.getName() + ": ");
-        player.setNum(scan.nextInt(), index);
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Введите число игрока " + player.getName() + ": ");
+		player.setNum(scan.nextInt(), index);
 
-    }
+	}
 
 	private boolean compareNums(Player player, int index) {
 		if (player.getNum(index) > pcNum) {
@@ -50,19 +50,19 @@ public class GuessNumber {
 			System.out.println("Это число меньше того, что загадал компьютер.");
 		} else {
 			System.out.println("Игрок " + player.getName() + " угадал число " + pcNum + " с " + (index+1) + " попытки!");
-		    return true;
+			return true;
 		}
 		if ((index == 9) && (player.getNum(index) != pcNum)) {
 			System.out.println("У игрока " + player.getName() + " закончились попытки.");
 		}
-        return false;
+		return false;
 	}
 
     private void printNums(Player player) {
-        System.out.println(Arrays.toString(Arrays.copyOf(player.getNums(), player.getIndex()+1)));
+		System.out.println(Arrays.toString(Arrays.copyOf(player.getNums(), player.getIndex()+1)));
     }
 
     private void fillNums(Player player) {
-        Arrays.fill(player.setNums(player.getNums()), 0, player.getIndex()+1, 0);
+		Arrays.fill(player.setNums(player.getNums()), 0, player.getIndex()+1, 0);
     }
 }
