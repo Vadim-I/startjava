@@ -16,27 +16,25 @@ public class Player {
 		return name;
 	}
 
-	public void setNums(int numb) {
-		this.nums[index] = numb;
-	}
-
-	public int getNums(int index) {
+	public int getNum(int index) {
 		return nums[index];
 	}
 
-	public int[] getArrayNums() {
+	public void setNum(int number, int index) {
+		this.nums[index] = number;
+		this.index = index;
+	}
+
+	public int[] getNums() {
+		return Arrays.copyOf(nums, nums.length);
+	}
+
+	public int[] setNums(int[] nums) {
+		this.nums = nums;
 		return nums;
 	}
 
 	public int getIndex() {
 		return index;
-	}
-
-	public void setIndex(int index) {
-		this.index = index;
-	}
-
-	public void fillNums(int i) {
-		Arrays.fill(nums, 0, i+1, 0);
 	}
 }

@@ -16,38 +16,53 @@ public class GuessNumber {
 
 	public void startGame() {
 		pcNum = (int)(Math.random() * 101);
-		int i = 0;
+		int index = -1;
 		System.out.println("Начинаем игру. У вас 10 попыток.");
-		do {
-			compareNums(player1, i);
-			if (player1.getNums(player1.getIndex()) != pcNum) {
-				compareNums(player2, i);
-			}
-			i++;
-		} while(((player1.getIndex() < 9) && (player2.getIndex() < 9)) &&
-			(player1.getNums(player1.getIndex()) != pcNum) &&
-			(player2.getNums(player2.getIndex()) != pcNum));
+        while(index < 9) {
+            index++;
+            enterNums(player1, index);
+            if(compareNums(player1, index)) {
+                break;
+            }
+            enterNums(player2, index);
+            if(compareNums(player2, index)) {
+                break;
+            }
+		}
 		System.out.println("Введенные игроками числа:");
-		System.out.println(Arrays.toString(Arrays.copyOf(player1.getArrayNums(), player1.getIndex()+1)));
-		System.out.println(Arrays.toString(Arrays.copyOf(player2.getArrayNums(), player2.getIndex()+1)));
-		player1.fillNums(player1.getIndex());
-		player2.fillNums(player2.getIndex());
+		printNums(player1);
+        printNums(player2);
+		fillNums(player1);
+		fillNums(player2);
 	}
 
-	public void compareNums(Player player0, int index0) {
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Введите число игрока " + player0.getName() + ": ");
-		player0.setIndex(index0);
-		player0.setNums(scan.nextInt());
-		if (player0.getNums(player0.getIndex()) > pcNum) {
+    private void enterNums(Player player, int index) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Введите число игрока " + player.getName() + ": ");
+        player.setNum(scan.nextInt(), index);
+
+    }
+
+	private boolean compareNums(Player player, int index) {
+		if (player.getNum(index) > pcNum) {
 			System.out.println("Это число больше того, что загадал компьютер.");
-		} else if (player0.getNums(player0.getIndex()) < pcNum) {
+		} else if (player.getNum(index) < pcNum) {
 			System.out.println("Это число меньше того, что загадал компьютер.");
-		} else if (player0.getNums(player0.getIndex()) == pcNum) {
-			System.out.println("Игрок " + player0.getName() + " угадал число " + pcNum + " с " + (index0+1) + " попытки!");
+		} else {
+			System.out.println("Игрок " + player.getName() + " угадал число " + pcNum + " с " + (index+1) + " попытки!");
+		    return true;
 		}
-		if ((index0 == 9) && (player0.getNums(player0.getIndex()) != pcNum)) {
-			System.out.println("У игрока " + player0.getName() + " закончились попытки.");
+		if ((index == 9) && (player.getNum(index) != pcNum)) {
+			System.out.println("У игрока " + player.getName() + " закончились попытки.");
 		}
+        return false;
 	}
+
+    private void printNums(Player player) {
+        System.out.println(Arrays.toString(Arrays.copyOf(player.getNums(), player.getIndex()+1)));
+    }
+
+    private void fillNums(Player player) {
+        Arrays.fill(player.setNums(player.getNums()), 0, player.getIndex()+1, 0);
+    }
 }
