@@ -36,11 +36,10 @@ public class GuessNumber {
 		fillNums(player2);
 	}
 
-    private void enterNums(Player player, int index) {
+	private void enterNums(Player player, int index) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Введите число игрока " + player.getName() + ": ");
 		player.setNum(scan.nextInt(), index);
-
 	}
 
 	private boolean compareNums(Player player, int index) {
