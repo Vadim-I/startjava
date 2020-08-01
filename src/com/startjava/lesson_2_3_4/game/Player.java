@@ -26,7 +26,7 @@ public class Player {
 	}
 
 	public int[] getNums() {
-		return Arrays.copyOf(nums, index+1);
+		return Arrays.copyOf(nums, index + 1);
 	}
 
 	public int getIndex() {
@@ -34,7 +34,7 @@ public class Player {
 	}
 
 	public void fillNums() {
-		Arrays.fill(Arrays.copyOf(nums, nums.length), 0, index+1, 0);
+		Arrays.fill(nums, 0, index + 1, 0);
 		index = -1;
 	}
 }

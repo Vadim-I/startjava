@@ -1,6 +1,5 @@
 package com.startjava.lesson_2_3_4.game;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class GuessNumber {
@@ -27,7 +26,6 @@ public class GuessNumber {
 				break;
 			}
 		}
-		System.out.println("Введенные игроками числа:");
 		printNums(player1);
 		printNums(player2);
 		player1.fillNums();
@@ -56,6 +54,10 @@ public class GuessNumber {
 	}
 
 	private void printNums(Player player) {
-		System.out.println(Arrays.toString(player.getNums()));
+		System.out.println("Введенные игроком " + player.getName() + " числа:");
+		for(int number : player.getNums()) {
+			System.out.print(number + " ");
+		}
+		System.out.println();
 	}
 }
